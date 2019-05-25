@@ -28,7 +28,7 @@
 CGI - Common Gateway Interface is an old protocol which acts as a common
 interface for Web Server to operate with CGI programs.
 
-<img src="attachments/1.png" width="950"> <br/>
+<img src="attachments/1.png" width="1000"> <br/>
 
 CGI protocol mandates a uniform way for reading data from browsers and
 passing them as environment variables to the program - into the
@@ -61,7 +61,7 @@ FastCGI is a revamp on CGI.
 | A process is created on a request and killed on giving response | Persistent process handles requests one after other |
 
  
-<img src="attachments/2.png" width="950"> <br/>
+<img src="attachments/2.png" width="1000"> <br/>
 
 #### Unix domain socket
 
@@ -130,7 +130,7 @@ fastcgi\_pass 127.0.0.1:9000;
 Zend Engine is the core of the PHP. When a website is opened in browser,
 the typical workflow is :
 
-<img src="attachments/3.png" width="950"> <br/>
+<img src="attachments/3.png" width="1000"> <br/>
 
 Zend Engine comes as a part of the Apache mod\_php, PHP-FPM or other
 flavours. Speed of web request roundtrips can be optimised a dozen times
