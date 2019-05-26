@@ -62,7 +62,7 @@ FastCGI is a revamp on CGI.
  
 <img src="attachments/2.png" width="1000"> <br/>
 
-#### Unix domain socket
+## Unix domain socket
 
 -   These are sockets within a system that allows communication between
     processes through kernel
@@ -75,7 +75,7 @@ FastCGI is a revamp on CGI.
 -   The nginx configuration for connecting to PHP-FPM via socket is: <br/>
     ```nginx fastcgi_pass unix:/var/run/php5-fpm.sock;```
 
-#### Named pipe
+## Named pipe
 
 Pipe in unix is a file which can be used for interprocess communication
 as one process could write into it, where another process could read
@@ -100,7 +100,7 @@ pipe to do the piping between zipped file and mysql.
 -   The nginx configuration for connecting to PHP-FPM via TCP is: <br/>
     ```nginx fastcgi_pass /tmp/namedPipe```
 
-#### TCP connection
+## TCP connection
 
 -   The nginx configuration for connecting to PHP-FPM via TCP is: <br/>
     ```nginx fastcgi_pass 127.0.0.1:9000;```
@@ -110,13 +110,13 @@ pipe to do the piping between zipped file and mysql.
 Zend Engine is the core of the PHP. When a website is opened in browser,
 the typical workflow is :
 
-<img src="attachments/3.png" width="1000"> <br/>
+<img src="attachments/3.png" width="1200"> <br/>
 
 Zend Engine comes as a part of the Apache mod\_php, PHP-FPM or other
 flavours. Speed of web request roundtrips can be optimised a dozen times
 by caching this opcodes. You may use APC. 
 
-#### JIT (By PHP 8)
+## JIT (By PHP 8)
 
 Usually Zend Engine would convert a PHP script into opcodes and execute
 opcodes to churn out HTML.
