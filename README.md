@@ -1,11 +1,12 @@
-   * [Introduction](README.md#introduction)
-   * [History](README.md#history)
-      * [What is CGI](README.md#what-is-cgi)
-   * [FastCGI ](README.md#fastcgi)
-            * [Unix domain socket](README.md#unix-domain-socket)
-            * [Named pipe](README.md#named-pipe)
-            * [TCP connection](README.md#tcp-connection)
-   * [Zend Engine](README.md#zend-engine)
+ * [Introduction](https://github.com/jojijacobk/PHP-FPM/blob/master/README.md#introduction)
+   * [History](https://github.com/jojijacobk/PHP-FPM/blob/master/README.md#history)
+      * [What is CGI](https://github.com/jojijacobk/PHP-FPM/blob/master/README.md#what-is-cgi)
+   * [FastCGI ](https://github.com/jojijacobk/PHP-FPM/blob/master/README.md#fastcgi)
+      * [Unix domain socket](https://github.com/jojijacobk/PHP-FPM/blob/master/README.md#unix-domain-socket)
+      * [Named pipe](https://github.com/jojijacobk/PHP-FPM/blob/master/README.md#named-pipe)
+      * [TCP connection](https://github.com/jojijacobk/PHP-FPM/blob/master/README.md#tcp-connection)
+   * [Zend Engine](https://github.com/jojijacobk/PHP-FPM/blob/master/README.md#zend-engine)
+      * [JIT (By PHP 8)](https://github.com/jojijacobk/PHP-FPM/blob/master/README.md#jit-by-php-8)
 
 
 # Introduction
