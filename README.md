@@ -113,8 +113,8 @@ the typical workflow is :
 <img src="attachments/3.png" width="1200"> <br/>
 
 Zend Engine comes as a part of the Apache mod\_php, PHP-FPM or other
-flavours. Speed of web request roundtrips can be optimised a dozen times
-by caching this opcodes. You may use APC. 
+flavours. **Speed of web request roundtrips can be optimised a dozen times
+by caching this opcodes**. You may use **APC**. 
 
 ## JIT (By PHP 8)
 
@@ -122,6 +122,6 @@ Usually Zend Engine would convert a PHP script into opcodes and execute
 opcodes to churn out HTML.
 
 Here, each time when a web page is loaded, the same process repeats. To
-save this time and resources, JIT compiler could convert this opcode
-into machine code and keep in memory. Next time when the same PHP script
-is requested, the machine code is directly run thus saving time.
+save this time and resources, **JIT compiler could convert this opcode
+into machine code and keep in memory**. Next time when the same PHP script
+is requested, the machine code is run directly, thus saves time.
