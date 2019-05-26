@@ -16,7 +16,7 @@
 -   This is possible because today developers adheres to **PSR** (PHP
     Standard Recommendations) - the PHP standards as stipulated by PHP
     FIG (Framework Interop Group).
--   We test our codes thoroughly using **PHPUnit. **
+-   We test our codes thoroughly using **PHPUnit.**
 -   We deploy our applications with **PHP FPM** (FastCGI Process
     Manager) behind a web server like **nginx.**
 -   We increase application performance through **opcode cache.**
