@@ -36,12 +36,11 @@ passing them as environment variables to the program - into the
 browser inputs by reading from standard input. The CGI script - that
 program in any language should now write into **standard output**, which
 will be read by CGI to pass as response to the browser. Typically all
-those scripts were placed in a single directory like cgi-bin. The main
-disadvantage with this approach is that each request would invoke a new
-request - creates a new process in the OS - that causes very heavy
-overhead for multiple requests. This "one new process per request" model
-makes CGI programs very inefficient. Also, time taken to create a new
-process was higher than time taken for output generation. Thus, modern
+those scripts were placed in a single directory like **cgi-bin**. The main
+disadvantage with this approach is that each new request would create a new process in the OS - that causes very heavy
+overhead for multiple requests. This **"one new process per request"** model
+makes CGI programs very inefficient. Also, **time taken to create a new
+process was higher than time taken for output generation**. Thus, modern
 systems as we see today has evolved for all languages.
 
 -   For perl, **Apache** adds an embedded interpreter module named
@@ -49,7 +48,7 @@ systems as we see today has evolved for all languages.
 -   For php, **Apache** adds an embedded interpreter module named
     **mod\_php**
 -   **FastCGI** is an evolved form of older **CGI **
-    -   **FastCGI **implementation for PHP released as **PHP-FPM**
+    -   **FastCGI** implementation for PHP released as **PHP-FPM**
 
 # FastCGI 
 
@@ -69,13 +68,12 @@ FastCGI is a revamp on CGI.
     processes through kernel
 -   Used for Interprocess communication - two processes within the same
     host can communicate each other
--   A socket is essentially a file in the linux file system. For eg:
-     `/tmp/someapp.sock` is a unix domain socket
+-   A socket is essentially a file in the linux file system. <br/> For eg: `/tmp/someapp.sock` is a unix domain socket
 -   The permissions on this socket is dictated by the permission of
     filesystem
 -   `ls -l` command would indicate the type of this file using `'s'`
-
-    fastcgi\_pass unix:/var/run/php5-fpm.sock;
+-   The nginx configuration for connecting to PHP-FPM via socket is: <br/>
+    ```nginx fastcgi\_pass unix:/var/run/php5-fpm.sock;```
 
 #### Named pipe
 
@@ -89,31 +87,11 @@ Named Pipe is a more advanced in that you could create a pipe and name
 it using `mkfifo` command, and the other process can conveniently read
 from it. 
 
-<table>
-<thead>
-<tr class="header">
-<th>Comand</th>
-<th>Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p><code>mkfifo -m 0666 /tmp/namedPipe</code></p>
-<p><br />
-<code>gzip -d &lt; file.gz &gt; /tmp/namedPipe</code></p>
-<p> </p>
-<p><code>LOAD DATA INFILE '/tmp/namedPipe' INTO TABLE tableName;</code></p>
-<div>
-<code></code>
-</div></td>
-<td><p>Create a named pipe</p>
-<p> </p>
-<p>Unzip a file into the named pipe</p>
-<p> </p>
-<p>Load the unzipped file into mysql</p></td>
-</tr>
-</tbody>
-</table>
+|Command|Explanation|
+|-------|------------|
+|`mkfifo -m 0666 /tmp/namedPipe`|Create a named pipe|
+|`gzip -d < file.gz > /tmp/namedPipe`| Unzip a file into the named pipe|
+|`LOAD DATA INFILE '/tmp/namedPipe' INTO TABLE tableName;`|Load the unzipped file into mysql|
 
 By the above example it avoids the need for at first deflating file into
 somewhere, and load that file into mysql. Instead we have used a named
