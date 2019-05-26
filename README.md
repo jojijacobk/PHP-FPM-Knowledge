@@ -47,7 +47,7 @@ systems as we see today has evolved for all languages.
     **mod\_perl**
 -   For php, **Apache** adds an embedded interpreter module named
     **mod\_php**
--   **FastCGI** is an evolved form of older **CGI **
+-   **FastCGI** is an evolved form of older **CGI**
     -   **FastCGI** implementation for PHP released as **PHP-FPM**
 
 # FastCGI 
@@ -73,7 +73,7 @@ FastCGI is a revamp on CGI.
     filesystem
 -   `ls -l` command would indicate the type of this file using `'s'`
 -   The nginx configuration for connecting to PHP-FPM via socket is: <br/>
-    ```nginx fastcgi\_pass unix:/var/run/php5-fpm.sock;```
+    ```nginx fastcgi_pass unix:/var/run/php5-fpm.sock;```
 
 #### Named pipe
 
@@ -97,11 +97,13 @@ By the above example it avoids the need for at first deflating file into
 somewhere, and load that file into mysql. Instead we have used a named
 pipe to do the piping between zipped file and mysql.
 
+-   The nginx configuration for connecting to PHP-FPM via TCP is: <br/>
+    ```nginx fastcgi_pass /tmp/namedPipe```
+
 #### TCP connection
 
-In cases where you need TCP connection to establish a 
-
-fastcgi\_pass 127.0.0.1:9000;
+-   The nginx configuration for connecting to PHP-FPM via TCP is: <br/>
+    ```nginx fastcgi_pass 127.0.0.1:9000;```
 
 # Zend Engine
 
