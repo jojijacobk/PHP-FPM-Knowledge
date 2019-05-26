@@ -124,4 +124,4 @@ opcodes to churn out HTML.
 Here, each time when a web page is loaded, the same process repeats. To
 save this time and resources, **JIT compiler could convert this opcode
 into machine code and keep in memory**. Next time when the same PHP script
-is requested, the machine code is run directly, thus saves time.
+is requested, the machine code is run directly. This means that once a PHP file is run using JIT compiler, then any further requests doesn't take time because it executes machine code directly. This is a big performance evolution for PHP obsoleting opcode cache mechanism.
